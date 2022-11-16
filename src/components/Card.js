@@ -1,19 +1,19 @@
 import '../App.css';
-import katie from '../katie.png'
+// import katie from '../katie.png'
 import star from '../star.png'
 
-function Card() {
+function Card(props) {
   return (
     <div className="card">
-     <img src={katie} className="card--image"></img>
+     <img src={`/images/${props.img}`} className="card--image"></img>
      <button className="card--button">SOLD OUT</button>
         <div className="review--text">
             <p className="rating">
             <img src={star} className="star"></img>
-            5.0 <span className="review--counttry">(6) USA</span>
+            {props.rating} <span className="review--counttry">({props.reviewCount}) • {props.location}</span>
             </p>
-            <p>Life lessons with Katie Zaferes</p>
-            <p> <b>From $136</b>/ person</p>
+            <p className="card--title">{props.title}{props.country}</p>
+            <p> <b>From ${props.price}</b> / person</p>
         </div>
     </div>
   );

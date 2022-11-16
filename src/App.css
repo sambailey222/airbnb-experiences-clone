@@ -48,15 +48,34 @@
   line-height: 110%;
 }
 
+
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
 .card {
   position:relative;
   width: 176px;
   text-align: left;
+  margin-left: 50px;
+  flex: 0 0 auto;         
+  display: flex;          
+  flex-direction: column; 
+}
+
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card--image {
   width: 100%;
-height: 235px;
+  height: 235px;
+  border-radius: 9px;
 }
 
 .card--button {
@@ -69,9 +88,7 @@ height: 235px;
   font-style: normal;
   font-weight: 500;
   font-size: 10.24px;
-/* line-height: 110%; */
-  /* transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); */
+
 }
 
 .star {
@@ -94,3 +111,4 @@ line-height: 110%;
 .review--counttry {
 color: #918E9B;
 }
+
