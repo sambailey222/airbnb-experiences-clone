@@ -9,12 +9,7 @@ function App() {
   const cards = Data.map((item, index) =>
     <Card
         key={item.id}
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
+        item={item}
       />
   );
 
@@ -23,8 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Hero /> */}
-      {/* <Card img='../katie.png' rating="5.0" reviewCount={6} country="USA" title="Life lessons with Katie Zaferes" price={136}/> */}
+      <Hero />
       <section className="cards-list">
         {cards}
       </section>
